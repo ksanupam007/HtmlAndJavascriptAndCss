@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Animal</h6><div ondragover="allowdrop(event)" id="div1" ondrop="drop(event)" style="border: 1px solid grey; height: 250px; width: 250px; display: inline-block"></div></div>
+        <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Human </h6><div ondragover="allowdrop(event)" id="div2" ondrop="drop(event)" style="border: 1px solid grey; height: 250px; width: 250px; display: inline-block"></div></div>
+        <div style="display: inline-block; width: 300px; height: 400px; border: 1px solid red; margin: 10px;"><h6>Fruit </h6><div ondragover="allowdrop(event)" id="div3" ondrop="drop(event)" style="border: 1px solid grey; height: 250px; width: 250px; display: inline-block"></div></div>
+
+        <div>
+        <img draggable="true" id="image1" ondragstart="drag(event)" style="width: 250px; height: 250px;" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?k=6&m=1080190886&s=612x612">
+        <img draggable="true" id="image2" ondragstart="drag(event)" style="width: 250px; height: 250px;" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?k=6&m=1080190886&s=612x612">
+        <img draggable="true" id="image3" ondragstart="drag(event)" style="width: 250px; height: 250px;" src="https://media.gettyimages.com/photos/indian-sales-man-stock-images-picture-id1080190886?k=6&m=1080190886&s=612x612">
+        </div>
+
+        <script>
+            function drag(event) {
+                event.dataTransfer.setData("text", event.target.id);
+            }
+
+            function allowdrop(event) {
+                event.preventDefault();
+            }
+
+            function drop(event) {
+                event.preventDefault();
+                var data = event.dataTransfer.getData("text");
+                event.target.appendChild(document.getElementById(data));
+            }
+        </script>
+    </body>
+</html>

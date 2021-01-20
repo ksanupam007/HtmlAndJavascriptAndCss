@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <link rel="stylesheet" href="./css/style.css">
+        <script src="./scripts/index.js"></script>
+        <h1 id="salutation"></h1>
+        <input type="text" id="user_name">
+        <input type="button" value="Update Local Storage" onclick="updateLocalStorage()">
+        <input type="button" value="Cler Local Storage" onclick="clearLocalStorage()">
+
+        <script>
+            function updateLocalStorage() {
+                window.localStorage.setItem("userName", document.getElementById("user_name").value);
+                window.localStorage.setItem("userAge", 10);
+                window.localStorage.setItem("userDesignation", "Developer");
+
+                document.getElementById("salutation").innerText = userNameValue;
+
+            }
+
+            function clearLocalStorage() {
+                window.localStorage.clear()
+
+            }
+
+            var userNameValue =  window.localStorage.getItem("userName");
+            if(userNameValue != null ) {
+                document.getElementById("salutation").innerText = "Hello " + userNameValue;
+                document.getElementById("user_name").value = userNameValue;
+            }
+        </script>
+    </body>
+</html>

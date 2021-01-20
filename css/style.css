@@ -1,0 +1,58 @@
+.emp_name {
+    color: green;
+    font-size: 24px;
+}
+
+.emp_container {
+    padding: 10px;
+    margin: 10px;
+    border: 2px solid black;
+    width: 300px;
+    display: inline-block;
+}
+
+.emp_container img {
+    height: 200px;
+    width: 100%;
+}
+
+.first_div {
+    margin-top: 20px;
+}
+
+.second_div {
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+h1 {
+    margin-left: 10px;
+}
+
+#page_title {
+    color:red;
+}
+
+.emp_container .second_div b {
+    color:grey;
+}
+
+.emp_container .second_div b.user_data#user_data_personal {
+    color:brown;
+}
+
+[title=Image] {
+    border: 1px solid blue;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    
+  }
+  [type=button] {
+      margin-left: 10px;
+  }
